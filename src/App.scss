@@ -1,2 +1,9 @@
 @import "./scss/reset";
 @import "./scss/variables";
+html {
+  font-size: 15px;
+}
+body {
+  text-align: center;
+  background-color: $lightNeon;
+}
