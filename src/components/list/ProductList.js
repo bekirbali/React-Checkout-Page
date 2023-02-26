@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { data } from "../../utils/data";
 import { Card } from "./Card";
 import styles from "./ProductList.module.scss";
-export const ProductList = () => {
+export const ProductList = ({ show, setShow }) => {
   const [total, setTotal] = useState(0);
 
   useEffect(() => {
@@ -21,6 +21,13 @@ export const ProductList = () => {
       </div>
       <div className={styles["total-price"]}>
         Total Cart Price: {total.toFixed(2)}
+      </div>
+      <div className={styles.add}>
+        {!show && (
+          <button className="btn btn-warning" onClick={() => setShow(true)}>
+            Add Item
+          </button>
+        )}
       </div>
     </div>
   );
