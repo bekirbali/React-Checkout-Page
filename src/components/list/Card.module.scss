@@ -1,22 +1,24 @@
 @import "../../scss/variables";
 .card-container {
-  width: 50%;
+  //   width: 50%;
   color: $darkBlue;
   box-shadow: 0 0 0.7rem 0.1rem rgba($color: $darkBlue, $alpha: 0.5);
-  margin: 1rem 0;
+  margin: 0.5rem 0;
   border-radius: 0.5rem;
 
   .show {
     display: flex;
     justify-content: center;
     gap: 2rem;
+
     .image {
       flex: 1;
       padding: 0.2rem;
       box-shadow: 0 0 0.7rem 0.1rem rgba($color: $darkGreen, $alpha: 0.5);
+      border-radius: 0.5rem;
       img {
         width: 100%;
-        min-width: 150px;
+        min-width: 100px;
       }
     }
     .details {
@@ -46,14 +48,22 @@
         width: 200px;
         display: flex;
         justify-content: center;
+        align-items: center;
         gap: 1rem;
+        span {
+          font-size: 1.5rem;
+          width: 2rem;
+        }
         cursor: default;
-        .btn {
+        .button {
           width: 1rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
           border-radius: 0.3rem;
           border: none;
           background-color: $darkGreen;
-          padding: 0.2rem;
+          padding: 0.3rem;
           color: $lightNeon;
           width: 24px;
           height: 24px;

@@ -1,0 +1,14 @@
+.home {
+  .main {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    .add {
+      flex: 2;
+    }
+    .list {
+      max-width: 60%;
+      flex: 3;
+    }
+  }
+}

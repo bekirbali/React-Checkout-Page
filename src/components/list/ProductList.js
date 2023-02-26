@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { data } from "../../utils/data";
 import { Card } from "./Card";
-export const ProductList = () => {
+import styles from "./ProductList.module.scss";
+export const ProductList = ({ show, setShow }) => {
   const [total, setTotal] = useState(0);
 
   useEffect(() => {
@@ -10,13 +11,24 @@ export const ProductList = () => {
     );
   }, []);
   return (
-    <div>
-      {data.map((item) => {
-        return (
-          <Card key={item.id} {...item} setTotal={setTotal} total={total} />
-        );
-      })}
-      {total.toFixed(2)}
+    <div className={styles.main}>
+      <div className={styles["card-container"]}>
+        {data.map((item) => {
+          return (
+            <Card key={item.id} {...item} setTotal={setTotal} total={total} />
+          );
+        })}
+      </div>
+      <div className={styles["total-price"]}>
+        Total Cart Price: {total.toFixed(2)}
+      </div>
+      <div className={styles.add}>
+        {!show && (
+          <button className="btn btn-warning" onClick={() => setShow(true)}>
+            Add Item
+          </button>
+        )}
+      </div>
     </div>
   );
 };

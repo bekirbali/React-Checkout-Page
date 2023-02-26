@@ -45,12 +45,18 @@ export const Card = ({
               <span>${price}</span>
             </div>
             <div className={styles.count}>
-              <button className={`${styles.minus} ${styles.btn}`}>
-                <FaMinus onClick={decreaseHandler} />
+              <button
+                className={`${styles.minus} ${styles.button}`}
+                onClick={decreaseHandler}
+              >
+                <FaMinus />
               </button>
               <span>{count}</span>
-              <button className={`${styles.plus} ${styles.btn}`}>
-                <FaPlus onClick={increaseHandler} />
+              <button
+                className={`${styles.plus} ${styles.button}`}
+                onClick={increaseHandler}
+              >
+                <FaPlus />
               </button>
             </div>
             <div className={styles["product-total"]}>
