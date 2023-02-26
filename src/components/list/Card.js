@@ -30,44 +30,46 @@ export const Card = ({
   };
 
   return (
-    <div className={styles["card-container"]}>
+    <>
       {count && (
-        <div className={styles.show}>
-          <div className={styles.image}>
-            <img src={image} alt="product" />
+        <div className={styles["card-container"]}>
+          <div className={styles.show}>
+            <div className={styles.image}>
+              <img src={image} alt="product" />
+            </div>
+            <div className={styles.details}>
+              <div className={styles.name}>
+                <h2>{name}</h2>
+              </div>
+              <div className={styles.price}>
+                <strong>${(price * dampingRate).toFixed(2)}</strong>
+                <span>${price}</span>
+              </div>
+              <div className={styles.count}>
+                <button
+                  className={`${styles.minus} ${styles.button}`}
+                  onClick={decreaseHandler}
+                >
+                  <FaMinus />
+                </button>
+                <span>{count}</span>
+                <button
+                  className={`${styles.plus} ${styles.button}`}
+                  onClick={increaseHandler}
+                >
+                  <FaPlus />
+                </button>
+              </div>
+              <div className={styles["product-total"]}>
+                <p>
+                  product total: ${(count * (price * dampingRate)).toFixed(2)}
+                </p>
+              </div>
+            </div>
+            <div className={styles["card-total"]}></div>
           </div>
-          <div className={styles.details}>
-            <div className={styles.name}>
-              <h2>{name}</h2>
-            </div>
-            <div className={styles.price}>
-              <strong>${(price * dampingRate).toFixed(2)}</strong>
-              <span>${price}</span>
-            </div>
-            <div className={styles.count}>
-              <button
-                className={`${styles.minus} ${styles.button}`}
-                onClick={decreaseHandler}
-              >
-                <FaMinus />
-              </button>
-              <span>{count}</span>
-              <button
-                className={`${styles.plus} ${styles.button}`}
-                onClick={increaseHandler}
-              >
-                <FaPlus />
-              </button>
-            </div>
-            <div className={styles["product-total"]}>
-              <p>
-                product total: ${(count * (price * dampingRate)).toFixed(2)}
-              </p>
-            </div>
-          </div>
-          <div className={styles["card-total"]}></div>
         </div>
       )}
-    </div>
+    </>
   );
 };
