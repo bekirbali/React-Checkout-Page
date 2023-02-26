@@ -1,0 +1,16 @@
+form {
+  text-align: left;
+  padding-left: 1rem;
+  label {
+    margin: 1rem 0 0.5rem 0.3rem;
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
+  input {
+    font-size: 1.2rem !important;
+  }
+  .button {
+    text-align: end;
+    margin-top: 0.5rem;
+  }
+}

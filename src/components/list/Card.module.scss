@@ -1,9 +1,9 @@
 @import "../../scss/variables";
 .card-container {
-  width: 50%;
+  //   width: 50%;
   color: $darkBlue;
   box-shadow: 0 0 0.7rem 0.1rem rgba($color: $darkBlue, $alpha: 0.5);
-  margin: 1rem 0;
+  margin: 0.5rem 0;
   border-radius: 0.5rem;
 
   .show {
@@ -16,7 +16,9 @@
       box-shadow: 0 0 0.7rem 0.1rem rgba($color: $darkGreen, $alpha: 0.5);
       img {
         width: 100%;
-        min-width: 150px;
+        min-width: 100px;
+        max-width: 200px;
+        max-height: 150px;
       }
     }
     .details {

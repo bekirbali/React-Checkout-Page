@@ -1,0 +1,12 @@
+.home {
+  .main {
+    display: flex;
+    gap: 1rem;
+    .add {
+      flex: 2;
+    }
+    .list {
+      flex: 3;
+    }
+  }
+}
