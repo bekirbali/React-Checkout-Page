@@ -13,7 +13,6 @@ export const Home = () => {
       data.reduce((sum, item) => sum + item.price * item.dampingRate, 0)
     );
     setNewData(data);
-    console.log(total);
   }, []);
   useEffect(() => {
     setTotal(

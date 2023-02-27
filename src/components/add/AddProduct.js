@@ -9,7 +9,7 @@ export const AddProduct = ({ show, setShow, setNewData, newData }) => {
 
   useEffect(() => {
     setNewData(data);
-  }, []);
+  }, [setNewData]);
 
   const addHandler = (e) => {
     e.preventDefault();

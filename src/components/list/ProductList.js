@@ -12,7 +12,7 @@ export const ProductList = ({
 }) => {
   useEffect(() => {
     setNewData(data);
-  }, []);
+  }, [setNewData, data]);
   return (
     <>
       <div className={styles.main}>
